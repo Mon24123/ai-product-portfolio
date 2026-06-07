@@ -229,6 +229,16 @@
             background: var(--accent-soft);
             color: var(--accent);
         }
+        .project-link {
+            border: 1px solid color-mix(in srgb, var(--accent) 38%, var(--border-light));
+            font-weight: 700;
+            padding: 0.38rem 0.95rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .project-link:hover {
+            background: var(--accent);
+            color: #fff;
+        }
 
         .highlights-grid {
             display: grid;
@@ -653,8 +663,8 @@
                     result: "针对个人学习与远程实习中“任务记录启动成本高、计时容易打断当前工作、事后复盘依赖记忆不准确”等问题，定义面向个人任务记录与时间复盘的桌面效率工具。借助 Codex / AI Agent 在 VS Code 环境中完成 Electron 应用从需求拆解、功能实现、界面调整到 Mac / Windows 打包的 Demo 闭环，并根据朋友内测反馈迭代修复 Windows 解压运行、小面板状态同步、暂停统计、任务切换等问题。",
                     goodTimeImages: ["goodtime-widget.svg", "goodtime-panel.svg", "goodtime-ai-flow.svg"],
                     links: [
-                        { label: "GitHub 仓库", url: "https://github.com/Mon24123/good-time" },
-                        { label: "Release 下载", url: "https://github.com/Mon24123/good-time/releases/tag/v0.2.2" }
+                        { label: "查看源码 / GitHub 仓库", url: "https://github.com/Mon24123/good-time" },
+                        { label: "下载安装包 / Release", url: "https://github.com/Mon24123/good-time/releases/tag/v0.2.2" }
                     ]
                 },
                 {
@@ -787,7 +797,7 @@
                     <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.8rem;">${project.result}</p>
                     ${project.links && project.links.length ? `
                         <div class="skill-tags" style="margin-bottom: 0.8rem;">
-                            ${project.links.map(link => `<a class="badge skill-badge" href="${link.url}" target="_blank" rel="noopener" style="text-decoration:none;">🔗 ${link.label}</a>`).join('')}
+                            ${project.links.map(link => `<a class="badge skill-badge project-link" href="${link.url}" target="_blank" rel="noopener" style="text-decoration:none;">🔗 ${link.label}</a>`).join('')}
                         </div>
                     ` : ''}
                     ${renderProjectMedia(project)}
