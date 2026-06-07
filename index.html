@@ -1,0 +1,912 @@
+<a href="毛雨晴-AI产品方向作品集.pdf" target="_blank" style="display:inline-block;padding:10px 16px;background:#000;color:#fff;border-radius:8px;text-decoration:none;">
+  📄 查看打印版(PDF)
+</a>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>毛雨晴 · AI 产品方向作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-page: #f8fafc;
+            --surface: #ffffff;
+            --surface-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #334155;
+            --text-tertiary: #64748b;
+            --border-light: #e2e8f0;
+            --accent: #2563eb;
+            --accent-light: #3b82f6;
+            --accent-soft: #eff6ff;
+            --accent-orange: #f97316;
+            --accent-orange-light: #fb923c;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --badge-bg: #f1f5f9;
+        }
+
+        body.dark {
+            --bg-page: #0f172a;
+            --surface: #1e293b;
+            --surface-card: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #94a3b8;
+            --border-light: #334155;
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --accent-soft: #1e293b;
+            --accent-orange: #f97316;
+            --badge-bg: #334155;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.5;
+            transition: background 0.2s, color 0.2s;
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(248, 250, 252, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 0.7rem 0;
+            font-size: 0.9rem;
+        }
+        body.dark .navbar {
+            background: rgba(15, 23, 42, 0.85);
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-orange));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-size: 0.9rem;
+        }
+        .nav-links a:hover { color: var(--accent-orange); }
+        .nav-actions {
+            display: flex;
+            gap: 0.6rem;
+            align-items: center;
+        }
+        .icon-btn {
+            background: var(--badge-bg);
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .icon-btn:hover {
+            background: var(--accent-soft);
+            color: var(--accent-orange);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem 0 1rem;
+        }
+        .hero-left {
+            flex-shrink: 0;
+        }
+        .hero-left h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            background: linear-gradient(135deg, var(--accent), var(--accent-orange));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .hero-right {
+            flex: 1;
+        }
+        .hero-right p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 0.5rem 0;
+        }
+        .hero-tags .badge {
+            font-size: 0.9rem;
+            padding: 0.3rem 1rem;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        .btn-primary, .btn-phone {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+        }
+        .btn-primary:hover, .btn-phone:hover {
+            background: var(--accent-orange);
+            transform: scale(0.98);
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 1.25rem;
+            padding: 1.2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        .section {
+            margin: 2.5rem 0;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+            border-left: 4px solid var(--accent-orange);
+            padding-left: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--badge-bg);
+            padding: 0.25rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        .skill-badge {
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 1rem 0;
+        }
+        .highlight-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent-orange);
+        }
+
+        .exp-item {
+            margin-bottom: 2rem;
+            background: var(--surface);
+            border-radius: 1.25rem;
+            padding: 1.2rem;
+            border: 1px solid var(--border-light);
+        }
+        .exp-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 0.6rem;
+        }
+        .exp-company {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .exp-date {
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+        }
+        .exp-points {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .exp-points li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.2rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .exp-points li::before {
+            content: "•";
+            color: var(--accent-orange);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .exp-highlight {
+            font-weight: 600;
+            color: var(--accent-orange);
+        }
+
+        .carousel {
+            margin-top: 1rem;
+            border-radius: 1rem;
+            background: var(--badge-bg);
+            padding: 0.5rem;
+        }
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            gap: 1rem;
+            padding-bottom: 0.5rem;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel-slide {
+            flex: 0 0 auto;
+            width: 300px;
+            max-width: 320px;
+            scroll-snap-align: start;
+            background: var(--surface-card);
+            border-radius: 0.8rem;
+            padding: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+        .carousel-slide .desc-text {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            word-break: break-word;
+        }
+        .carousel-slide img {
+            max-width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: var(--surface);
+            border-radius: 1.25rem;
+            padding: 1.2rem;
+            border: 1px solid var(--border-light);
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .project-header h3 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        .project-date {
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+        }
+
+        .media-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .media-item {
+            flex: 1;
+            min-width: 130px;
+            background: var(--badge-bg);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .media-item img {
+            max-width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .media-item img:hover {
+            transform: scale(1.02);
+        }
+        .qr-text {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            margin-top: 0.3rem;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .skill-category {
+            background: var(--surface);
+            border-radius: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--border-light);
+        }
+        .skill-category h4 {
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+            color: var(--accent-orange);
+            border-left: 3px solid var(--accent-orange);
+            padding-left: 0.5rem;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skill-tag {
+            background: var(--badge-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .edu-detail {
+            margin-top: 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .edu-badge {
+            background: var(--accent-orange);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-light);
+            margin-top: 2rem;
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: var(--accent-orange);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            transition: opacity 0.2s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            background: var(--accent);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .modal-content img {
+            width: auto;
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-modal:hover {
+            color: var(--accent-orange);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1rem; }
+            .hero { flex-direction: column; align-items: flex-start; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .nav-container { flex-direction: column; align-items: stretch; }
+            .nav-links { justify-content: center; }
+            .nav-actions { justify-content: center; }
+            .media-item { min-width: 100px; }
+            .carousel-slide { width: 260px; }
+        }
+
+        @media print {
+            .navbar, .nav-actions, .back-to-top, .carousel-controls, .icon-btn, .modal {
+                display: none !important;
+            }
+            body, .card, .exp-item {
+                background: white;
+                color: black;
+                border: 1px solid #ccc;
+            }
+            .container { max-width: 100%; padding: 0; }
+            .section { margin: 1rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">个人主页 · 毛雨晴</div>
+            <div class="nav-links">
+                <a href="#hero" data-nav>简介</a>
+                <a href="#highlights" data-nav>亮点</a>
+                <a href="#experience" data-nav>实习</a>
+                <a href="#projects" data-nav>项目</a>
+                <a href="#skills" data-nav>技能</a>
+                <a href="#education" data-nav>教育</a>
+            </div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="icon-btn">🌓 浅色</button>
+                <button id="printBtn" class="icon-btn">🖨️ 打印</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="app-root"></div>
+    </main>
+    <button id="backToTop" class="back-to-top" aria-label="返回顶部">↑</button>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="放大图片">
+        </div>
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        const resumeData = {
+            basics: {
+                name: "毛雨晴",
+                phone: "198-2260-9828",
+                email: "maoyuqing2027@163.com",
+                github: "https://github.com/Mon24123",
+                shortBio: "对 AI 产品、用户体验和个人效率工具有持续兴趣。实习中接触过真实用户提问与大模型回复评估，也尝试用 AI 协作完成桌面应用 Demo；过往用户运营和内容创作经历让我更习惯从具体场景、用户表达和任务流程里理解问题。",
+                keywords: ["真实用户问题", "大模型体验评估", "AI协作开发", "用户理解", "产品实践", "内容表达"]
+            },
+            highlights: [
+                { number: "70W+", label: "用户运营实战中累计贡献 GMV，长期接触真实用户沟通、转化与反馈" },
+                { number: "1款", label: "AI 协作完成 Good Time 桌面应用，并发布 Mac / Windows 版本" },
+                { number: "8个", label: "搭建垂直场景 Gems / Agent，落地运营工作流提效" },
+                { number: "4.7W+", label: "内容单篇最高浏览量，具备把产品体验和个人观察讲清楚的能力" }
+            ],
+            internships: [
+                {
+                    company: "北京智谱华章科技股份有限公司",
+                    role: "AI 数据实习生",
+                    period: "2026.05-至今",
+                    points: [
+                        { text: "参与“智谱清言”真实用户问答样本评估，基于 JSON / Markdown 等格式，围绕前后矛盾、常识合理性、格式/指令遵循等维度识别 Bad Case", highlight: false },
+                        { text: "高频接触真实用户提问与模型回复，持续记录模型在意图理解、信息遗漏、前后矛盾、格式偏离、回答冗余等方面的典型问题", highlight: true },
+                        { text: "在使用内部系统过程中主动记录页面 Bug、交互阻塞与标注效率问题，结合实际作业流程整理问题清单并反馈项目组，补充一线使用视角", highlight: false }
+                    ],
+                    keyPractices: []
+                },
+                {
+                    company: "杭州浙才学子教育咨询服务有限公司",
+                    role: "用户运营实习生",
+                    period: "2025.04-2026.04",
+                    points: [
+                        { text: "围绕大学生英语长期班转化目标，负责“用户承接—直播导流—1v1 规划咨询—成交复盘”全链路，通过高频沟通识别学习动机、决策阻力与转化节点", highlight: false },
+                        { text: "累计转化 180 名付费学员，贡献约 70 万元 GMV，业绩稳定在 60+ 人团队前 10%，沉淀对用户需求、表达方式和决策链路的理解", highlight: true },
+                        { text: "面对旺季触达量大但深聊质量下降的问题，将单日触达从约 1000 人收紧至约 800 人，把精力转向更可能进入咨询的人群，单周最高成交 9 单", highlight: false },
+                        { text: "针对资料准备、用户回复、电话规划稿、成交复盘等高频动作，搭建 8 个垂直场景 Gems / Agent，方法同步至 60+ 人团队并纳入新人培训", highlight: true }
+                    ],
+                    keyPractices: [
+                        {
+                            title: "全链路运营业绩 Top",
+                            desc: "在 60+ 人团队中承担从用户承接到咨询转化的完整链路，既看得到用户从犹豫到决策的细节，也能把真实沟通中的问题沉淀为可复用流程。",
+                            imgSrc: "february.png"
+                        },
+                        {
+                            title: "8个垂直场景AI智能体 (Gems)",
+                            desc: "独立搭建 8 个垂直场景 AI 智能体（<strong>Gems</strong>），覆盖资料准备、来信回复、电话规划稿、成交复盘等高频流程，把 AI 从“聊天工具”落到具体工作流。",
+                            imgSrc: "agent.png"
+                        },
+                        {
+                            title: "四维用户分层体系",
+                            desc: "针对原开场话术分层粗放、无效沟通占比高的问题，搭建年级 - 基础 - 投入度 - 目标 4 维用户分层体系，训练自己从用户表达里识别真实意图。",
+                            imgSrc: "chat.png"
+                        }
+                    ]
+                },
+                {
+                    company: "上海界点教育科技有限公司",
+                    role: "活动运营实习生",
+                    period: "2024.01-2024.03",
+                    points: [
+                        { text: "参与线上活动招募与转化，跟踪“私聊—审核群—正式群—会员”路径，形成标准化 SOP", highlight: false },
+                        { text: "在早期运营实践中训练活动拆解、用户触达、话术调整和转化复盘能力，为后续用户理解与产品判断打基础", highlight: false },
+                        { text: "担任队长及教练，多次获得最佳个人奖、最佳教练奖，文案被团队复用", highlight: true }
+                    ],
+                    keyPractices: []
+                }
+            ],
+            projects: [
+                {
+                    name: "Good Time（好时光）AI 协作开发桌面应用",
+                    period: "2026.05 - 2026.06",
+                    techStack: ["Electron", "JavaScript", "AI协作开发", "GitHub Release"],
+                    result: "针对个人学习与远程实习中“任务记录启动成本高、计时容易打断当前工作、事后复盘依赖记忆不准确”等问题，定义面向个人任务记录与时间复盘的桌面效率工具。借助 Codex / AI Agent 在 VS Code 环境中完成 Electron 应用从需求拆解、功能实现、界面调整到 Mac / Windows 打包的 Demo 闭环，并根据朋友内测反馈迭代修复 Windows 解压运行、小面板状态同步、暂停统计、任务切换等问题。",
+                    goodTimeImages: ["goodtime-widget.svg", "goodtime-panel.svg", "goodtime-ai-flow.svg"],
+                    links: [
+                        { label: "GitHub 仓库", url: "https://github.com/Mon24123/good-time" },
+                        { label: "Release 下载", url: "https://github.com/Mon24123/good-time/releases/tag/v0.2.2" }
+                    ]
+                },
+                {
+                    name: "内容创作与个人实践",
+                    period: "2023.10 - 至今",
+                    techStack: ["小红书", "公众号", "今日头条"],
+                    result: "长期运营小红书、公众号、今日头条等内容账号，围绕学习成长、个人经历与工具使用进行选题、写作和分发；小红书单篇最高浏览量 4.7W+、最高互动 600+，公众号累计发布 100+ 篇文章，单篇最高浏览量 7000+。这段经历训练了我把复杂体验转化为普通用户能理解的表达能力。",
+                    wechatImages: ["foot.png", "comment.png"],
+                    xiaohongshuImages: ["xhs.png", "xhs2.png"],
+                    qrCodeImage: "wxcode.png",
+                    xiaohongshuLink: "https://xhslink.com/m/DnZHFcwTKL"
+                },
+                {
+                    name: "CNN 手写数字识别课程项目",
+                    period: "2026.05",
+                    techStack: ["Python", "PyTorch", "AI应用验证"],
+                    result: "基于 PyTorch 搭建 CNN 手写数字识别模型，完成 MNIST 训练与预测可视化，标准测试集准确率达到 98.57%。在课程要求外额外收集 3 组多人真实手写数字样本，发现真实拍照样本仅识别正确 9/30，并从背景噪声、光照阴影、书写差异、裁剪一致性等维度分析误判原因，形成对 AI 应用真实可用性的理解。"
+                }
+            ],
+            skills: {
+                ai: ["AI产品体验", "ChatGPT", "Claude", "Cursor", "Perplexity", "Codex", "AI数据标注", "Vibe Coding"],
+                content: ["Canva", "剪映", "Obsidian", "公众号排版", "产品体验复盘"],
+                other: ["Electron入门", "GitHub", "飞书多维表格", "用户运营", "数据分析", "复盘SOP", "SQL", "Python"]
+            },
+            education: {
+                school: "南京工业职业技术大学",
+                degree: "自动化技术与应用专业（本科）",
+                period: "2023.09-2027.06",
+                certificates: "CET-4 577，CET-6 472；MS Office 二级",
+                awards: "连续两年获得学业奖学金"
+            }
+        };
+
+        function renderCarouselPractice(items) {
+            if (!items || items.length === 0) return '';
+            return `
+                <div class="carousel">
+                    <div class="carousel-container">
+                        ${items.map(item => `
+                            <div class="carousel-slide">
+                                <div style="font-weight: 700; margin-bottom: 6px; color: var(--accent-orange); font-size:1rem;">${item.title}</div>
+                                <div class="desc-text">${item.desc}</div>
+                                <div style="background: var(--badge-bg); padding: 6px; border-radius: 8px; width: 100%; margin-top: 6px;">
+                                    <img src="${item.imgSrc}" alt="${item.title}" onclick="openModal('${item.imgSrc}')" style="cursor:pointer;">
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function initCarousels() {
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const container = carousel.querySelector('.carousel-container');
+                const prev = carousel.querySelector('.carousel-prev');
+                const next = carousel.querySelector('.carousel-next');
+                if (prev && next && container) {
+                    prev.onclick = () => container.scrollBy({ left: -280, behavior: 'smooth' });
+                    next.onclick = () => container.scrollBy({ left: 280, behavior: 'smooth' });
+                }
+            });
+        }
+
+        function renderHero() {
+            const emailFull = resumeData.basics.email;
+            return `
+                <section id="hero" class="hero">
+                    <div class="hero-left"><h1>${resumeData.basics.name}</h1></div>
+                    <div class="hero-right">
+                        <p>${resumeData.basics.shortBio}</p>
+                        <div class="hero-tags">${resumeData.basics.keywords.map(k => `<span class="badge skill-badge">#${k}</span>`).join('')}</div>
+                        <div class="contact-buttons">
+                            <a href="mailto:${emailFull}" class="btn-primary">📧 ${emailFull}</a>
+                            <button class="btn-phone" id="callBtn">📞 ${resumeData.basics.phone}</button>
+                            <a href="${resumeData.basics.github}" target="_blank" rel="noopener" class="btn-primary">GitHub · Mon24123</a>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderHighlights() {
+            return `
+                <div class="section" id="highlights">
+                    <h2 class="section-title">✨ 亮点成果</h2>
+                    <div class="highlights-grid">
+                        ${resumeData.highlights.map(h => `<div class="card highlight-card"><div class="highlight-number">${h.number}</div><div style="font-size: 0.9rem; color: var(--text-secondary);">${h.label}</div></div>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderInternships() {
+            return `
+                <div class="section" id="experience">
+                    <h2 class="section-title">💼 实习经历</h2>
+                    ${resumeData.internships.map(exp => `
+                        <div class="exp-item">
+                            <div class="exp-header"><span class="exp-company">${exp.company} · ${exp.role}</span><span class="exp-date">${exp.period}</span></div>
+                            <ul class="exp-points">${exp.points.map(p => `<li class="${p.highlight ? 'exp-highlight' : ''}">${p.text}</li>`).join('')}</ul>
+                            ${exp.keyPractices && exp.keyPractices.length ? `<div style="margin-top:1rem; font-weight:600; color:var(--accent-orange);font-size:0.85rem">📌 关键产出（可左右滑动，点击图片可放大）</div>${renderCarouselPractice(exp.keyPractices)}` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderProjects() {
+            return `
+                <div class="section" id="projects">
+                    <h2 class="section-title">📌 项目实践</h2>
+                    <div class="projects-grid">
+                        ${resumeData.projects.map(project => renderProjectCard(project)).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderProjectCard(project) {
+            return `
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>${project.name}</h3>
+                        <span class="project-date">${project.period}</span>
+                    </div>
+                    <div class="skill-tags" style="margin-bottom: 0.6rem;">
+                        ${project.techStack.map(t => `<span class="badge skill-badge">${t}</span>`).join('')}
+                    </div>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.8rem;">${project.result}</p>
+                    ${project.links && project.links.length ? `
+                        <div class="skill-tags" style="margin-bottom: 0.8rem;">
+                            ${project.links.map(link => `<a class="badge skill-badge" href="${link.url}" target="_blank" rel="noopener" style="text-decoration:none;">🔗 ${link.label}</a>`).join('')}
+                        </div>
+                    ` : ''}
+                    ${renderProjectMedia(project)}
+                </div>
+            `;
+        }
+
+        function renderProjectMedia(project) {
+            if (!project.wechatImages && !project.xiaohongshuImages && !project.qrCodeImage && !project.goodTimeImages) return '';
+            return `
+                <div class="media-row">
+                    ${(project.goodTimeImages || []).map((img, index) => `
+                        <div class="media-item" onclick="openModal('${img}')">
+                            <img src="${img}" alt="Good Time 项目截图${index + 1}">
+                        </div>
+                    `).join('')}
+                    ${(project.wechatImages || []).map((img, index) => `
+                        <div class="media-item" onclick="openModal('${img}')">
+                            <img src="${img}" alt="公众号截图${index + 1}">
+                        </div>
+                    `).join('')}
+                    ${(project.xiaohongshuImages || []).map((img, index) => `
+                        <div class="media-item" onclick="openModal('${img}')">
+                            <img src="${img}" alt="小红书截图${index + 1}">
+                        </div>
+                    `).join('')}
+                    ${project.qrCodeImage ? `
+                        <div class="media-item" onclick="openModal('${project.qrCodeImage}')">
+                            <img src="${project.qrCodeImage}" alt="公众号二维码">
+                            <div class="qr-text">扫码查看公众号</div>
+                        </div>
+                    ` : ''}
+                </div>
+                ${project.xiaohongshuLink ? `
+                    <div style="text-align: center; margin-top: 0.8rem;">
+                        <a href="${project.xiaohongshuLink}" target="_blank" style="color: var(--accent-orange);">🔗 点击跳转小红书主页 >></a>
+                    </div>
+                ` : ''}
+            `;
+        }
+
+        function renderSkills() {
+            return `
+                <div class="section" id="skills">
+                    <h2 class="section-title">🧰 工具与能力</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category"><h4>🤖 AI 能力</h4><div class="skill-tags">${resumeData.skills.ai.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div></div>
+                        <div class="skill-category"><h4>🎨 内容能力</h4><div class="skill-tags">${resumeData.skills.content.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div></div>
+                        <div class="skill-category"><h4>⚙️ 其他</h4><div class="skill-tags">${resumeData.skills.other.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEducation() {
+            return `
+                <div class="section" id="education">
+                    <h2 class="section-title">🎓 教育背景</h2>
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                            <strong style="font-size:1.1rem;">${resumeData.education.school}</strong>
+                            <span class="exp-date">${resumeData.education.period}</span>
+                        </div>
+                        <div style="margin: 0.3rem 0; font-size:0.95rem;">${resumeData.education.degree}</div>
+                        <div class="edu-detail">
+                            <span class="edu-badge">📜 ${resumeData.education.certificates}</span>
+                            <span class="edu-badge">🏅 ${resumeData.education.awards}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderFullPage() {
+            const root = document.getElementById('app-root');
+            if (!root) return;
+            root.innerHTML = `
+                ${renderHero()}
+                ${renderHighlights()}
+                ${renderInternships()}
+                ${renderProjects()}
+                ${renderSkills()}
+                ${renderEducation()}
+                <footer class="footer">© 2026 毛雨晴 · 最后更新 2026.06 | AI 产品方向</footer>
+            `;
+            const callBtn = document.getElementById('callBtn');
+            if (callBtn) callBtn.onclick = () => alert("电话: 198-2260-9828");
+            initCarousels();
+        }
+
+        function initFeatures() {
+            const themeBtn = document.getElementById('themeToggle');
+            const printBtn = document.getElementById('printBtn');
+            const backBtn = document.getElementById('backToTop');
+            // 强制默认深色模式
+            document.body.classList.add('dark');
+            // 如果之前有存储的主题，则覆盖为深色（确保一致性）
+            localStorage.setItem('theme', 'dark');
+            themeBtn.onclick = () => {
+                document.body.classList.toggle('dark');
+                const isDark = document.body.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                themeBtn.textContent = isDark ? '🌓 浅色' : '🌓 深色';
+            };
+            printBtn.onclick = () => window.print();
+            window.addEventListener('scroll', () => { if (window.scrollY > 300) backBtn.classList.add('show'); else backBtn.classList.remove('show'); });
+            backBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.querySelectorAll('[data-nav]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').slice(1);
+                    const target = document.getElementById(targetId);
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        }
+
+        renderFullPage();
+        initFeatures();
+    </script>
+</body>
+</html>
